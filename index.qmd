@@ -1,6 +1,6 @@
 ---
 title: "Geographic Information Systems (GIS)"
-subtitle: "Complete Learning Journey: From Beginner to Analyst"
+subtitle: "An Introduction to Spatial Thinking and Analysis"
 author: "Firman Hadi"
 date: today
 engine: knitr
