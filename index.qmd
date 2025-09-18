@@ -1,89 +1,35 @@
 ---
 title: "Geographic Information Systems (GIS)"
 subtitle: "Complete Learning Journey: From Beginner to Analyst"
-author: "Your Name"
-date: "`r Sys.Date()`"
+author: "Firman Hadi"
+date: today
+engine: knitr
+project:
+  type: website
+  output-dir: docs
 format:
   revealjs:
-    theme: [default, custom.scss]
+    theme: default
     slide-number: true
     chalkboard: true
     preview-links: auto
-    logo: ""
-    css: styles.css
-    footer: "GIS Learning Journey - Lessons 1-4"
+    footer: "Environment and Spatial Planning Course - UNPAD @2025"
     transition: slide
     background-transition: fade
     highlight-style: github
-    code-copy: true
+    code-line-numbers: true
+    code-overflow: wrap
+    self-contained: false
 execute:
   echo: false
+  eval: false
   warning: false
   message: false
 ---
 
-```{css, echo=FALSE}
-.reveal .slides section .fragment.highlight-current-blue {
-  opacity: 1;
-  visibility: inherit;
-}
-.reveal .slides section .fragment.highlight-current-blue.current-fragment {
-  background: rgba(0, 150, 255, 0.2);
-  padding: 10px;
-  border-radius: 5px;
-}
+# Geographic Information Systems
 
-.coffee-gradient {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: bold;
-}
-
-.spatial-highlight {
-  background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 100%);
-  padding: 20px;
-  border-radius: 10px;
-  border-left: 5px solid #ff6b9d;
-}
-
-.tool-box {
-  background: rgba(102, 126, 234, 0.1);
-  padding: 15px;
-  border-radius: 8px;
-  margin: 10px 0;
-  border: 2px solid #667eea;
-}
-
-.example-highlight {
-  background: rgba(255, 215, 0, 0.2);
-  padding: 15px;
-  border-radius: 8px;
-  border-left: 4px solid #ffd700;
-  margin: 15px 0;
-}
-
-.big-emoji {
-  font-size: 3em;
-  margin: 20px 0;
-}
-
-.lesson-title {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 2.5em;
-  font-weight: bold;
-}
-```
-
-# Geographic Information Systems {.coffee-gradient}
-
-::: {.big-emoji}
 🌍
-:::
 
 **Complete Learning Journey**
 
@@ -111,23 +57,17 @@ execute:
 
 ---
 
-# Lesson 1 {.lesson-title}
+# Lesson 1: What is GIS?
 
-## What is GIS?
-
-::: {.big-emoji}
 🗺️
-:::
 
 *The Foundation*
 
 ---
 
-## Imagine You're a Detective... {.fragment}
+## Imagine You're a Detective...
 
-::: {.big-emoji .fragment}
 🕵️
-:::
 
 ::: {.fragment}
 But instead of solving crimes, you're solving **puzzles about our world**
@@ -137,7 +77,7 @@ But instead of solving crimes, you're solving **puzzles about our world**
 Every clue has two parts:
 :::
 
-::: {.fragment .highlight-current-blue}
+::: {.fragment}
 **WHAT** it is + **WHERE** it is
 :::
 
@@ -147,7 +87,7 @@ Every clue has two parts:
 
 ::: columns
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Geographic**
 
 Anything that has a location on Earth
@@ -155,7 +95,7 @@ Anything that has a location on Earth
 :::
 
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Information**
 
 Data and facts about those things
@@ -163,7 +103,7 @@ Data and facts about those things
 :::
 
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **System**
 
 Tools and methods that bring it all together
@@ -175,11 +115,9 @@ Tools and methods that bring it all together
 
 ## The Key Insight
 
-::: {.big-emoji}
 💡
-:::
 
-::: {.fragment .spatial-highlight}
+::: {.fragment}
 **GIS is all about answering questions that begin with "WHERE"**
 :::
 
@@ -194,15 +132,11 @@ Tools and methods that bring it all together
 
 ## Your Coffee Shop Challenge
 
-::: {.big-emoji}
 ☕
-:::
 
-::: {.example-highlight}
 **"Where to find the best place to build a new coffee shop?"**
 
 Perfect example of a "WHERE" question that GIS can solve!
-:::
 
 ---
 
@@ -210,10 +144,9 @@ Perfect example of a "WHERE" question that GIS can solve!
 
 ::: columns
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
-::: {.big-emoji}
+::: {.fragment}
 📊
-:::
+
 **1. DATA**
 
 *The Facts*
@@ -223,10 +156,9 @@ Population, competitors, traffic, income
 :::
 
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
-::: {.big-emoji}
+::: {.fragment}
 🗺️
-:::
+
 **2. MAPS**
 
 *The Visual Story*
@@ -236,10 +168,9 @@ Putting data onto maps to see patterns
 :::
 
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
-::: {.big-emoji}
+::: {.fragment}
 🧠
-:::
+
 **3. ANALYSIS**
 
 *The Smart Thinking*
@@ -255,27 +186,22 @@ Combining and analyzing everything
 
 ::: columns
 ::: {.column width="33%"}
-::: {.tool-box}
 **Location A**
 
 ✅ High residential density  
 ❌ 2 competing coffee shops  
 ❌ Low car traffic
 :::
-:::
 
 ::: {.column width="33%"}
-::: {.tool-box}
 **Location B**
 
 ⚠️ Medium residential density  
 ✅ No competition nearby  
 ✅ High car traffic
 :::
-:::
 
 ::: {.column width="33%"}
-::: {.tool-box}
 **Location C**
 
 ❌ Low residential density  
@@ -283,9 +209,8 @@ Combining and analyzing everything
 ⚠️ Medium car traffic
 :::
 :::
-:::
 
-::: {.fragment .example-highlight}
+::: {.fragment}
 **Cultural Context Matters!** In Indonesia, coffee shops are social spaces for relaxing and hanging out.
 :::
 
@@ -293,11 +218,8 @@ Combining and analyzing everything
 
 ## Lesson 1 Summary
 
-::: {.big-emoji}
 🎉
-:::
 
-::: {.spatial-highlight}
 **What is GIS?**
 
 A system that answers "WHERE" questions by combining:
@@ -305,7 +227,6 @@ A system that answers "WHERE" questions by combining:
 - **Data** - Raw facts and information
 - **Maps** - Visual display of data  
 - **Analysis** - Smart spatial calculations
-:::
 
 ::: {.fragment}
 **Key Insight:** Always consider local context and culture in your analysis!
@@ -313,13 +234,9 @@ A system that answers "WHERE" questions by combining:
 
 ---
 
-# Lesson 2 {.lesson-title}
+# Lesson 2: Geographic Data Types
 
-## Geographic Data Types
-
-::: {.big-emoji}
 🗺️
-:::
 
 *The Building Blocks*
 
@@ -327,15 +244,13 @@ A system that answers "WHERE" questions by combining:
 
 ## Imagine You're an Artist
 
-::: {.big-emoji}
 🎨
-:::
 
 Someone asks you to draw your neighborhood. You have **two approaches:**
 
 ::: columns
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Approach 1: Shapes**
 
 Use pencil to draw outlines - rectangles for buildings, lines for roads, dots for important places
@@ -343,7 +258,7 @@ Use pencil to draw outlines - rectangles for buildings, lines for roads, dots fo
 :::
 
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Approach 2: Pixels**
 
 Use a grid of colored squares where each square represents what's at that location
@@ -357,10 +272,9 @@ Use a grid of colored squares where each square represents what's at that locati
 
 ::: columns
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
-::: {.big-emoji}
+::: {.fragment}
 📐
-:::
+
 **Vector Data**
 
 Digital shapes made of points, lines, and polygons
@@ -370,10 +284,9 @@ Digital shapes made of points, lines, and polygons
 :::
 
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
-::: {.big-emoji}
+::: {.fragment}
 🔲
-:::
+
 **Raster Data**
 
 Grid of pixels, each containing data values
@@ -389,10 +302,9 @@ Grid of pixels, each containing data values
 
 ::: columns
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
-::: {.big-emoji}
+::: {.fragment}
 📍
-:::
+
 **Points**
 
 Specific locations
@@ -402,10 +314,9 @@ Specific locations
 :::
 
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
-::: {.big-emoji}
+::: {.fragment}
 📏
-:::
+
 **Lines**
 
 Things that connect or flow
@@ -415,10 +326,9 @@ Things that connect or flow
 :::
 
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
-::: {.big-emoji}
+::: {.fragment}
 ⬛
-:::
+
 **Polygons**
 
 Areas with boundaries
@@ -432,7 +342,6 @@ Areas with boundaries
 
 ## Coffee Shop Data Types
 
-::: {.example-highlight}
 ::: columns
 ::: {.column width="33%"}
 **Your Coffee Shop Location**
@@ -458,34 +367,27 @@ Areas enclosed by boundary lines
 Polygons (census) or Raster (modeled)
 :::
 :::
-:::
 
 ---
 
 ## Key Insight
 
-::: {.big-emoji}
 💡
-:::
 
-::: {.spatial-highlight}
 **The same real-world phenomenon can be represented as different data types!**
 
 The choice depends on:
 - What data is available to you
 - How detailed you need to be  
 - What kind of analysis you're planning
-:::
 
 ---
 
 ## Earth's Address System
 
-::: {.big-emoji}
 🌍
-:::
 
-::: {.fragment .spatial-highlight}
+::: {.fragment}
 **How do we tell a computer exactly where something is?**
 
 Think of coordinate systems as Earth's address system - every location gets a unique "address" using numbers
@@ -497,7 +399,6 @@ Think of coordinate systems as Earth's address system - every location gets a un
 
 ::: columns
 ::: {.column width="50%"}
-::: {.tool-box}
 **Latitude**
 
 How far north or south
@@ -506,10 +407,8 @@ How far north or south
 - +90° = North Pole  
 - -90° = South Pole
 :::
-:::
 
 ::: {.column width="50%"}
-::: {.tool-box}
 **Longitude**
 
 How far east or west
@@ -517,7 +416,6 @@ How far east or west
 - 0° = Prime Meridian
 - +180° = Far east
 - -180° = Far west
-:::
 :::
 :::
 
@@ -529,11 +427,8 @@ How far east or west
 
 ## The Projection Problem
 
-::: {.big-emoji}
 🏀
-:::
 
-::: {.spatial-highlight}
 **Earth isn't flat, but our screens are!**
 
 It's like trying to peel an orange and lay it perfectly flat
@@ -541,21 +436,18 @@ It's like trying to peel an orange and lay it perfectly flat
 **Your insight:** The basketball peel would be wrinkled!
 
 Map projections must make trade-offs - something gets distorted (shape, area, distance, or direction)
-:::
 
 ---
 
 ## Indonesia's Coordinate System
 
-::: {.spatial-highlight}
 **UTM Zone 48S**
 
 Universal Transverse Mercator optimized for Indonesia
 
 More accurate distances and areas for local analysis
-:::
 
-::: {.fragment .example-highlight}
+::: {.fragment}
 **Why this matters:** When analyzing your coffee shop locations in Jakarta, using UTM 48S gives you much more accurate distance measurements than global systems!
 :::
 
@@ -567,7 +459,7 @@ Like photos can be .jpg or .png, geographic data has special formats:
 
 ::: columns
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Shapefile (.shp)**  
 Most common, works everywhere
 
@@ -577,7 +469,7 @@ Web-friendly format
 :::
 
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **KML (.kml)**  
 Google's format
 
@@ -591,11 +483,8 @@ Raster data workhorse
 
 ## Lesson 2 Summary
 
-::: {.big-emoji}
 🎉
-:::
 
-::: {.spatial-highlight}
 **Geographic Data Types Mastered!**
 
 ::: columns
@@ -615,17 +504,12 @@ Continuous information
 :::
 
 **Plus:** Coordinate systems, projections, and data formats
-:::
 
 ---
 
-# Lesson 3 {.lesson-title}
+# Lesson 3: Maps and Visualization
 
-## Maps and Visualization
-
-::: {.big-emoji}
 🎨
-:::
 
 *Making Data Speak*
 
@@ -633,17 +517,13 @@ Continuous information
 
 ## Maps are Visual Stories
 
-::: {.big-emoji}
 📖
-:::
 
-::: {.spatial-highlight}
 **Key Insight**
 
 Raw data is like having all the ingredients for a great meal sitting on your counter.
 
 **Visualization is the cooking that turns those ingredients into something people actually want to consume.**
-:::
 
 ---
 
@@ -651,23 +531,19 @@ Raw data is like having all the ingredients for a great meal sitting on your cou
 
 ::: columns
 ::: {.column width="50%"}
-::: {.tool-box style="background: rgba(220, 53, 69, 0.2); border-color: #dc3545;"}
 **❌ Raw Data**
 
 "Location A has population density of 2,847 people per km²"
 
 *Hard to understand, requires mental processing*
 :::
-:::
 
 ::: {.column width="50%"}
-::: {.tool-box style="background: rgba(40, 167, 69, 0.2); border-color: #28a745;"}
 **✅ Visual Story**
 
 Map with darker green areas showing higher population density
 
 *Instant understanding, clear patterns*
-:::
 :::
 :::
 
@@ -677,7 +553,7 @@ Map with darker green areas showing higher population density
 
 ::: columns
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **1. Know Your Audience**
 
 Match the map to who's using it
@@ -687,7 +563,7 @@ Match the map to who's using it
 :::
 
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **2. Right Visual Language**
 
 Colors and symbols that make intuitive sense
@@ -697,7 +573,7 @@ Colors and symbols that make intuitive sense
 :::
 
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **3. Guide the Eye**
 
 Clear visual hierarchy
@@ -719,11 +595,11 @@ Clear visual hierarchy
 **Level 2:** Supporting Cast *(Competitors, context)*
 :::
 
-::: {.fragment .spatial-highlight}
+::: {.fragment}
 **Level 1:** The Star *(Your main message)*
 :::
 
-::: {.fragment .example-highlight}
+::: {.fragment}
 **Coffee Shop Example:** Your 3 potential locations should be Level 1 (the star)
 :::
 
@@ -733,7 +609,7 @@ Clear visual hierarchy
 
 ::: columns
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Sequential**
 
 Gradual story (low → high)
@@ -743,7 +619,7 @@ Gradual story (low → high)
 :::
 
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Categorical**
 
 Different types
@@ -753,7 +629,7 @@ Different types
 :::
 
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Diverging**
 
 Two-way from center
@@ -767,11 +643,8 @@ Two-way from center
 
 ## Your Color Choice: Income Levels
 
-::: {.big-emoji}
 💚
-:::
 
-::: {.spatial-highlight}
 **You chose: Gradient Colors ✅**
 
 Perfect! Income is continuous data (low → high)
@@ -779,7 +652,6 @@ Perfect! Income is continuous data (low → high)
 **Light Green → Dark Green**
 
 Why green? People associate green with money and prosperity!
-:::
 
 ---
 
@@ -787,7 +659,7 @@ Why green? People associate green with money and prosperity!
 
 ::: columns
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Rule 1**
 
 Red + Green = Bad
@@ -797,7 +669,7 @@ Red + Green = Bad
 :::
 
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Rule 2**
 
 7 Colors Maximum
@@ -807,7 +679,7 @@ Red + Green = Bad
 :::
 
 ::: {.column width="33%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Rule 3**
 
 Intuitive Colors
@@ -821,15 +693,13 @@ Intuitive Colors
 
 ## Essential Map Elements
 
-::: {.big-emoji}
 🧭
-:::
 
 **You nailed the big three!**
 
 ::: columns
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 🧭 **North Arrow** - Which way is up?
 
 📏 **Scale** - How big is this?
@@ -839,7 +709,7 @@ Intuitive Colors
 :::
 
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 📋 **Title** - What am I looking at?
 
 📊 **Data Source** - Where did this come from?
@@ -853,17 +723,13 @@ Intuitive Colors
 
 ## The 5-Second Test
 
-::: {.big-emoji}
 ⏱️
-:::
 
-::: {.spatial-highlight}
 **Show your map for 5 seconds, then hide it**
-:::
 
 ::: columns
 ::: {.column width="50%"}
-::: {.fragment .tool-box style="background: rgba(40, 167, 69, 0.2); border-color: #28a745;"}
+::: {.fragment}
 **✅ Success**
 
 "I saw three gold stars and green areas"
@@ -871,7 +737,7 @@ Intuitive Colors
 :::
 
 ::: {.column width="50%"}
-::: {.fragment .tool-box style="background: rgba(220, 53, 69, 0.2); border-color: #dc3545;"}
+::: {.fragment}
 **❌ Failure**
 
 "Umm... lots of colors and stuff"
@@ -883,17 +749,13 @@ Intuitive Colors
 
 ## Every Map Tells One Story
 
-::: {.big-emoji}
 💡
-:::
 
-::: {.spatial-highlight}
 **Your Coffee Shop Story:**
 
 *"Location B offers the best combination of high-income customers and minimal competition."*
-:::
 
-::: {.fragment .example-highlight}
+::: {.fragment}
 **Every design choice should support this single message!**
 :::
 
@@ -901,11 +763,8 @@ Intuitive Colors
 
 ## Lesson 3 Summary
 
-::: {.big-emoji}
 🎉
-:::
 
-::: {.spatial-highlight}
 **Maps and Visualization Mastered!**
 
 ::: columns
@@ -929,17 +788,12 @@ Sequential, categorical, diverging
 All essential elements, clean layout
 :::
 :::
-:::
 
 ---
 
-# Lesson 4 {.lesson-title}
+# Lesson 4: Spatial Analysis
 
-## Spatial Analysis
-
-::: {.big-emoji}
 🔍
-:::
 
 *The Real Power*
 
@@ -949,7 +803,7 @@ All essential elements, clean layout
 
 ::: columns
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Regular Data Analysis**
 
 - What? How much?
@@ -959,7 +813,7 @@ All essential elements, clean layout
 :::
 
 ::: {.column width="50%"}
-::: {.fragment .spatial-highlight}
+::: {.fragment}
 **Spatial Analysis**
 
 - Where in relation to what else?
@@ -973,14 +827,12 @@ All essential elements, clean layout
 
 ## Questions Only Spatial Analysis Can Answer
 
-::: {.spatial-highlight}
 - Which coffee shops are within walking distance of each other?
 - How do sales change as you get farther from the city center?
 - Which areas have high demand but no coffee shops nearby?
 - What's the optimal delivery route to visit 10 shops?
-:::
 
-::: {.fragment .example-highlight}
+::: {.fragment}
 **These questions can't be answered with spreadsheets alone!**
 :::
 
@@ -990,7 +842,7 @@ All essential elements, clean layout
 
 ::: columns
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Distance** - How far apart are things?
 
 **Direction** - Which way is one thing from another?
@@ -1000,7 +852,7 @@ All essential elements, clean layout
 :::
 
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Containment** - What's inside what?
 
 **Overlap** - Where do things intersect?
@@ -1012,7 +864,6 @@ All essential elements, clean layout
 
 ## Your Coffee Shop Examples
 
-::: {.example-highlight}
 ::: columns
 ::: {.column width="50%"}
 **Distance:** "How long to reach coffee shop from university?" *(Your example!)*
@@ -1028,7 +879,6 @@ All essential elements, clean layout
 **Overlap:** Where do catchment areas overlap?
 :::
 :::
-:::
 
 ---
 
@@ -1036,7 +886,7 @@ All essential elements, clean layout
 
 ::: columns
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **1. Buffer Analysis**  
 Show me everything within X distance
 
@@ -1049,7 +899,7 @@ Where do different layers intersect?
 :::
 
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **4. Distance Analysis**  
 How far is everything from everything else?
 
@@ -1059,7 +909,7 @@ Find locations meeting spatial criteria
 :::
 :::
 
-::: {.fragment .spatial-highlight}
+::: {.fragment}
 **You correctly identified Network Analysis for travel time questions!**
 :::
 
@@ -1067,19 +917,15 @@ Find locations meeting spatial criteria
 
 ## Tool 2: Network Analysis
 
-::: {.big-emoji}
 🛣️
-:::
 
-::: {.spatial-highlight}
 **Your Travel Time Question!**
 
 "How long to reach each coffee shop from university?"
 
 Uses actual road networks for real routes and travel times
-:::
 
-::: {.fragment .example-highlight}
+::: {.fragment}
 **Why Network, Not Buffer:** People follow roads, not straight lines! Traffic, one-way streets, and route choices all matter.
 :::
 
@@ -1087,21 +933,16 @@ Uses actual road networks for real routes and travel times
 
 ## Hands-On: Analyzing Location B
 
-::: {.big-emoji}
 ⭐
-:::
 
-::: {.spatial-highlight}
 **Complete 5-Tool Analysis**
 
 Let's see how all tools work together for real business decisions
-:::
 
 ---
 
 ## Location B Analysis: Steps 1-3
 
-::: {.tool-box}
 **Step 1: Buffer Analysis** - 5-minute walk buffer  
 *Result: 4,050 potential customers, but 2 competitors nearby*
 
@@ -1110,35 +951,28 @@ Let's see how all tools work together for real business decisions
 
 **Step 3: Overlay Analysis** - High traffic + income + low competition  
 *Result: Location B sits in sweet spot where all three overlap!*
-:::
 
 ---
 
 ## Location B Analysis: Steps 4-5
 
-::: {.tool-box}
 **Step 4: Distance Analysis** - Natural service area  
 *Result: 12,000 potential customers in service area*
 
 **Step 5: Spatial Query** - Check against optimal criteria  
 *Result: Meets 3 of 4 criteria (excellent score!)*
-:::
 
 ---
 
 ## The Verdict
 
-::: {.big-emoji}
 ✅
-:::
 
-::: {.spatial-highlight}
 **All Five Analyses Point to Location B!**
 
 Best balance of accessibility, market potential, and manageable competition
-:::
 
-::: {.fragment .example-highlight}
+::: {.fragment}
 **The Power of Spatial Analysis**
 
 Instead of guessing, you have **quantitative evidence** supporting your decision
@@ -1150,11 +984,8 @@ This analysis would be **impossible** with spreadsheets alone!
 
 ## Lesson 4 Summary
 
-::: {.big-emoji}
 🎉
-:::
 
-::: {.spatial-highlight}
 **Spatial Analysis Mastered!**
 
 ::: columns
@@ -1174,15 +1005,12 @@ Buffer, network, overlay, distance, spatial queries
 Correctly identified network analysis for travel time!
 :::
 :::
-:::
 
 ---
 
-# Complete Journey Summary {.lesson-title}
+# Complete Journey Summary
 
-::: {.big-emoji}
 🎯
-:::
 
 ---
 
@@ -1190,14 +1018,14 @@ Correctly identified network analysis for travel time!
 
 ::: columns
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Lesson 1: Foundation**
 - GIS answers "WHERE" questions
 - Three magic ingredients: Data, Maps, Analysis
 - Cultural context matters
 :::
 
-::: {.fragment .tool-box}
+::: {.fragment}
 **Lesson 2: Building Blocks**
 - Vector vs Raster data
 - Coordinate systems and projections
@@ -1206,14 +1034,14 @@ Correctly identified network analysis for travel time!
 :::
 
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Lesson 3: Visualization**
 - Maps tell visual stories
 - Color theory and hierarchy
 - Professional map elements
 :::
 
-::: {.fragment .tool-box}
+::: {.fragment}
 **Lesson 4: Analysis**
 - Spatial relationships
 - Five essential tools
@@ -1226,13 +1054,11 @@ Correctly identified network analysis for travel time!
 
 ## Key Insights You Developed
 
-::: {.spatial-highlight}
 - **Indonesian coffee culture** affects location analysis
 - **Network analysis** for travel time questions
 - **Same phenomena, different data types** depending on source
 - **Visual hierarchy** guides decision-making
 - **Spatial analysis provides evidence**, not just intuition
-:::
 
 ---
 
@@ -1264,7 +1090,7 @@ Correctly identified network analysis for travel time!
 
 ::: columns
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Immediate Applications**
 - Practice with real datasets
 - Explore GIS software
@@ -1273,7 +1099,7 @@ Correctly identified network analysis for travel time!
 :::
 
 ::: {.column width="50%"}
-::: {.fragment .tool-box}
+::: {.fragment}
 **Advanced Learning**
 - Statistical spatial analysis
 - Remote sensing
@@ -1284,11 +1110,9 @@ Correctly identified network analysis for travel time!
 
 ---
 
-## Thank You! {.coffee-gradient}
+## Thank You!
 
-::: {.big-emoji}
 🌟
-:::
 
 **You've successfully completed your GIS foundation!**
 
@@ -1298,7 +1122,6 @@ Correctly identified network analysis for travel time!
 
 ## Resources and References
 
-::: {.tool-box}
 **Essential GIS Software:**
 - QGIS (Free and open source)
 - ArcGIS (Industry standard)
@@ -1310,15 +1133,12 @@ Correctly identified network analysis for travel time!
 - OpenStreetMap for practice data
 - Local GIS communities and meetups
 - Online courses and tutorials
-:::
 
 ---
 
 ## Questions?
 
-::: {.big-emoji}
 ❓
-:::
 
 **Ready to apply GIS to your world!**
 
